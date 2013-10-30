@@ -1,9 +1,13 @@
-function I = riemann_sum(fn, a, b, N, type)
+function I = riemann_sum_type(fn, a, b, N, type)
     % Check the of arguments.
     % N is optional and has a default value.
     if nargin == 3
         N = 100;
-    elseif nargin ~= 4
+    % Depending on the type argument the function can use either the left, middle
+    % or right point i each partition.
+    elseif nargin == 4
+        type = 'm';
+    elseif nargin ~= 5
         error('riemann_sum: Wrong number of arguments');
     end
 
@@ -17,8 +21,12 @@ function I = riemann_sum(fn, a, b, N, type)
     % Set X as the x value for each rectangle
     X = X .* delta_x;
 
-    % Shift x to the middle of the partition.
-    X = X + delta_x/2;
+    % Shift x to the middle of the partition or the rightside depending on type
+    if type == 'm'
+        X = X + delta_x/2;
+    elseif type == 'u'
+        X = X + delta_x;
+    end
 
     % apply the function to each x value and
     % multiplicate witch delta_x get the area for each partition.
