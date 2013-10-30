@@ -1,4 +1,4 @@
-function I = riemann_sum(fn, a, b, N, type)
+function I = riemann_sum(fn, a, b, N)
     % Check the of arguments.
     % N is optional and has a default value.
     if nargin == 3
