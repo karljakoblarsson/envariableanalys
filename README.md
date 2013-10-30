@@ -11,4 +11,4 @@ Contact
 k.jakob.larsson@gmail.com
 lajakob@studnet.chalmers.se
 
-[0] (http://www.math.chalmers.se/Math/Grundutb/CTH/tmv151/1213/)
+[0]: http://www.math.chalmers.se/Math/Grundutb/CTH/tmv151/1213/ "TMV151"
