@@ -1,0 +1,10 @@
+*.aux
+*.log
+*.sty
+*.DS_Store
+*.m~
+*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
