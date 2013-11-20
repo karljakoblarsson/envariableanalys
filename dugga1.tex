@@ -1,0 +1,24 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[top=2cm,bottom=2cm]{geometry}
+\usepackage[labelformat=empty]{caption}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{anslistings}
+
+\begin{document}
+    \title{Designuppgift 1
+    God design.}
+    \rhead{Jakob Larsson TKDES-1. \today}
+    \pagenumbering{gobble}
+
+    \inputmatlabnt{simpson.m}
+    \inputmatlabnt{riemann.m}
+    \begin{figure}
+        \includegraphics[width=\textwidth]{plot1.png}
+        \includegraphics[width=\textwidth]{plot2.png}
+        \caption{}
+    \end{figure}
+\end{document}

@@ -1,9 +1,9 @@
-%%% Calculate the riemannsum
+%%% Calculate the Riemann-sum
 %%% Either the left, rigth or middle. depending on the type argument
 %%% 'l' = left, 'm' = middle, 'r' = right
 
-function I = riemann_sum_type(fn, a, b, N, type)
-    % Check the of arguments.
+function I = riemann(fn, a, b, N, type)
+    %%% Check the of arguments.
     % N is optional and has a default value.
     if nargin == 3
         N = 100;
@@ -15,15 +15,16 @@ function I = riemann_sum_type(fn, a, b, N, type)
         error('riemann_sum: Wrong number of arguments');
     end
 
-    % The actual function:
-
-    intervall_size = b - a;
-    delta_x = intervall_size / N;
+    %%% The actual function:
+    interval_size = b - a;
+    delta_x = interval_size / N;
 
     % Set the list X as the partition-numbers.
     X = 0:N - 1;
     % Set X as the x value for each rectangle
     X = X .* delta_x;
+    % Shift to the start of the interval
+    X = X + a;
 
     % Shift x to the middle of the partition or the rightside depending on type
     if type == 'm'
