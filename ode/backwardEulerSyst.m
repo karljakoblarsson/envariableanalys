@@ -38,10 +38,12 @@ function [t,U]= backwardEulerSyst(f,I,U0,N)
     U = U';
     t = t';
 
-    % Tests:
-    %
-    % [t U] = minPrimBak(@(x) cos(2*x), [0 2*pi], 0, 100);
-    % [tt UU] = ode45(@(hej, x) [cos(2*x)], [0 2*pi], [0 0]);
-    % then plot 'em togehter with the analytical solution
-    % cos(x)*sin(x)
-    %
+end
+
+% Tests:
+%
+% [t U] = minPrimBak(@(x) cos(2*x), [0 2*pi], 0, 100);
+% [tt UU] = ode45(@(hej, x) [cos(2*x)], [0 2*pi], [0 0]);
+% then plot 'em togehter with the analytical solution
+% cos(x)*sin(x)
+%
