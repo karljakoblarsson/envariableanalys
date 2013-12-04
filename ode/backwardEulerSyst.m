@@ -17,7 +17,7 @@ function [t,U]= backwardEulerSyst(f,I,U0,N)
 
     %%% This is the same as the simpler version. Not as the provided shell.
 
-    U=zeros(length(U0), N+1); % Iteration is faster with a pre-alcolated array.
+    U=zeros(length(U0), N+1); % Iteration is faster with a pre-allocated array.
 
     k = abs(I(2) - I(1)) / N; %steglängden.
     t = I(1):k:I(2); %Vektor med alla t_n
@@ -37,7 +37,6 @@ function [t,U]= backwardEulerSyst(f,I,U0,N)
     % Transpose to columnvectors to match ode45's output.
     U = U';
     t = t';
-
 end
 
 % Tests:

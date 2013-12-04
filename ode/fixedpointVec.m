@@ -3,6 +3,6 @@ function x = fixedpointVec(fn, x, tol)
     while diff >= tol
         old = x;
         x = fn(x);
-        diff = max(x - old);
+        diff = max(arrayfun(@abs, x - old));
     end
 end
