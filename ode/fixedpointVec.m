@@ -1,5 +1,8 @@
 function x = fixedpointVec(fn, x, tol)
-    while abs(fn(x) - x) >= tol
-        x = arrayfun(fn, x);
+    diff = 100;
+    while diff >= tol
+        old = x;
+        x = fn(x);
+        diff = max(x - old);
     end
 end
