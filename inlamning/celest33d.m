@@ -12,7 +12,7 @@ function dy=celest3(t,y)
     p2 = y(4:6);
     p3 = y(7:9);
 
-    dy(1:3) = y(10:12); %Forst planetens hastighet
+   dy(1:3) = y(10:12); %Forst planetens hastighet
     dy(4:6) = y(13:15); %Andra planetens hastighet
     dy(7:9) = y(16:18); %Andra planetens hastighet
 

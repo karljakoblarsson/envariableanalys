@@ -8,11 +8,11 @@ function dy=celest3(t,y)
     m2 = 10; %Massorna
     m3 = 1e-1;
 
-    p1 = y(1:2); %Forsta planetens position
+    p1 = y(1:2); %Forsta planetens position
     p2 = y(3:4); %Andra planetens position
     p3 = y(5:6); %Andra planetens position
 
-    v1 = y(7:8); %Forst planetens hastighet
+    v1 = y(7:8); %Forst planetens hastighet
     v2 = y(9:10); %Andra planetens hastighet
     v3 = y(11:12); %Andra planetens hastighet
     

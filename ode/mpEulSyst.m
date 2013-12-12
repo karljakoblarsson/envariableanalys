@@ -1,6 +1,4 @@
 %% Differential equations solver based on "mittpunktsmetoden".
-%% Based on a function-shell provided by the professor.
-%% Hence the ugly code :P
 
 function [t,U]= backwardEulerSyst(f,I,U0,N)
     %% f: (t, U) -> y
@@ -19,7 +17,7 @@ function [t,U]= backwardEulerSyst(f,I,U0,N)
 
     U=zeros(length(U0), N+1); % Iteration is faster with a pre-allocated array.
 
-    k = abs(I(2) - I(1)) / N; %steglängden.
+    k = abs(I(2) - I(1)) / N; % Step length.
     t = I(1):k:I(2); %Vektor med alla t_n
 
     U(:,1) = U0';
